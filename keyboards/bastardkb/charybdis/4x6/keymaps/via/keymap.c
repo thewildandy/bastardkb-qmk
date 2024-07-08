@@ -75,14 +75,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
         KC_ESC,    KC_1,    KC_2,    KC_VOLD,    KC_VOLU,    KC_MPLY,       KC_6,    KC_7,    KC_8,    KC_9,    KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        KC_NO,    MT(MOD_LSFT,KC_Q),    MT(MOD_LALT,KC_W),    MT(MOD_LCTRL,KC_F),    MT(MOD_LGUI,KC_P),    KC_B, KC_J,       MT(MOD_LGUI,KC_L),    MT(MOD_LCTRL,KC_U),    MT(MOD_LALT,KC_Y),    KC_NO, KC_NO,
+        KC_NO,    MT(MOD_LSFT,KC_Q),    MT(MOD_LALT,KC_W),    MT(MOD_LCTL,KC_F),    MT(MOD_LGUI,KC_P),    KC_B, KC_J,       MT(MOD_LGUI,KC_L),    MT(MOD_LCTL,KC_U),    MT(MOD_LALT,KC_Y),    KC_NO, KC_NO,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_ESC,    KC_A,    KC_R,    KC_S,    KC_T,    KC_G,       KC_M,    KC_N,    KC_E,    KC_I, KC_O, KC_NO,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_TAB,    KT_Z,    KC_X,    KC_C,    KC_D,    KC_V,       KC_K,    KC_H, KC_COMM,  KC_DOT, PT_SLSH,  KC_NO,
+       KC_TAB,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,       KC_K,    KC_H, KC_COMM,  KC_DOT, PT_SLSH,  KC_NO,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                    MO(2), KC_LSFT,   LT(1,KC_SPC),      KC_ENT,  LT(3,KC_BSPC),
-                                           KC_NO, KC_ NO,     KC_NO
+                                           KC_NO, KC_NO,     KC_NO
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 

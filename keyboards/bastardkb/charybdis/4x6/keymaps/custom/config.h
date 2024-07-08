@@ -60,3 +60,16 @@
 /* Reset. */
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17
+
+/**
+ * Auto Shift
+ * Use the shifted version of a key following a brief hold. Mod keys are not shifted, but they can be.
+ * Many additional options available. See: https://docs.qmk.fm/features/auto_shift
+ */ 
+#define AUTO_SHIFT_TIMEOUT 175 // start around 175 and work down
+
+// I only want this on A-Z for now, so disable everything else
+#define NO_AUTO_SHIFT_SPECIAL
+#define NO_AUTO_SHIFT_TAB
+#define NO_AUTO_SHIFT_SYMBOLS
+#define NO_AUTO_SHIFT_NUMERIC

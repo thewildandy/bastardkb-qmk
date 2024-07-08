@@ -18,7 +18,8 @@
 
 #ifdef VIA_ENABLE
 /* VIA configuration. */
-#    define DYNAMIC_KEYMAP_LAYER_COUNT 4
+// Number of layers available in VIA -- max is 15, (depending on memory)
+#    define DYNAMIC_KEYMAP_LAYER_COUNT 5
 #endif // VIA_ENABLE
 
 #ifndef __arm__

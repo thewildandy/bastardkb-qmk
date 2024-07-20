@@ -47,7 +47,9 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 enum charybdis_keymap_layers {
      LAYER_BASE = 0,
      _L1,
-     LAYER_COLEMAK = 7,
+     LAYER_COLEMAK = 5,
+     _AW_MOUSE = 6,
+
 };
 
 // clang-format off
@@ -65,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,       KC_N,    KC_M, KC_MS_BTN1,  KC_MS_BTN2, KC_SLSH, KC_LALT,
      // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                    KC_ENT, KC_LSFT,   KC_LGUI,      KC_SPC,  KC_BSPC,
-                                        KC_LCTL, TO(0),     XXXXXXX
+                                        KC_LCTL, TO(5),     QK_BOOT
      //                            ╰───────────────────────────╯ ╰──────────────────╯
      ),
 
@@ -96,26 +98,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
           KC_TAB,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,       KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH,  KC_NO,
      // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                   MO(2), KC_LSFT,   LT(1,KC_SPC),      KC_ENT,  LT(3,KC_BSPC),
-                                             XXXXXXX, TO(2),     MO(1)
+                                   XXXXXXX, KC_LSFT,   LT(6,KC_SPC),      KC_ENT,  LT(3,KC_BSPC),
+                                             TO(0), XXXXXXX,     TO(0)
      //  
      ),
 
 // Andy's mouse layer
-//   [LAYER_NUM_MOUSE] = LAYOUT_charybdis_4x6(
-//   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-//        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-//   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-//        XXXXXXX, XXXXXXX, XXXXXXX, KC_LBRC, XXXXXXX, XXXXXXX,    XXXXXXX, KC_7, KC_8, KC_9, XXXXXXX, XXXXXXX, 
-//   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-//        XXXXXXX, XXXXXXX, KC_MS_BTN2, XXXXXXX, KC_MS_BTN1, XXXXXXX,    XXXXXXX, KC_4, KC_5, KC_6, XXXXXXX, XXXXXXX, 
-//   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-//        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_0, KC_1, KC_2, KC_3, XXXXXXX, XXXXXXX, 
-//   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-//                                   XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
-//                                            XXXXXXX, XXXXXXX,      XXXXXXX
-//   //                            ╰───────────────────────────╯ ╰──────────────────╯
-//   ),
+  [_AW_MOUSE] = LAYOUT_charybdis_4x6(
+  // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
+       QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+       XXXXXXX, XXXXXXX, XXXXXXX, KC_LBRC, XXXXXXX, XXXXXXX,    XXXXXXX, KC_7, KC_8, KC_9, XXXXXXX, XXXXXXX, 
+  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+       XXXXXXX, XXXXXXX, KC_MS_BTN2, XXXXXXX, KC_MS_BTN1, XXXXXXX,    XXXXXXX, KC_4, KC_5, KC_6, XXXXXXX, XXXXXXX, 
+  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_0, KC_1, KC_2, KC_3, XXXXXXX, XXXXXXX, 
+  // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
+                                  XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
+                                           XXXXXXX, XXXXXXX,      XXXXXXX
+  //                            ╰───────────────────────────╯ ╰──────────────────╯
+  ),
 
 // // Transparent template
 //      // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
